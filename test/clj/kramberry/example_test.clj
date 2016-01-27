@@ -1,5 +1,6 @@
 (ns kramberry.example-test
-    (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer :all]
+            [kramberry.shared :refer [magic]]))
 
 (deftest example-passing-test
-  (is (= 1 1)))
+  (is (= 41 magic)))

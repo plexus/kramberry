@@ -16,15 +16,19 @@
 
   :clean-targets ^{:protect false} ["resources/public/js/compiled"]
 
+  :doo {:build "test"}
+
   :cljsbuild {:builds [{:id "dev"
                         :source-paths ["src"]
-                        :output-to "resources/public/js/compiled/kramberry.js"
-                        :output-dir "resources/public/js/compiled/out"
-                        :source-map-timestamp true
-                        :optimizations :none}
+                        :compiler
+                        {:output-to "resources/public/js/compiled/kramberry.js"
+                         :output-dir "resources/public/js/compiled/out"
+                         :source-map-timestamp true
+                         :optimizations :none}}
 
                        {:id "test"
                         :source-paths ["src" "test/cljs"]
-                        :output-to "resources/public/js/compiled/testable.js"
-                        :main kramberry.test-runner
-                        :optimizations :none}]})
+                        :compiler
+                        {:output-to "resources/public/js/compiled/testable.js"
+                         :main kramberry.test-runner
+                         :optimizations :none}}]})

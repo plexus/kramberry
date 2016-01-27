@@ -1,6 +1,8 @@
 # kramberry
 
-##
+An attempt to port the Kramdown syntax to Clojure and Clojurescript, based on the Kramdown test suite.
+
+So far it passes 4 out of 442 tests, so yeah.
 
 ## License
 

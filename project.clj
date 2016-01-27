@@ -1,11 +1,17 @@
-(defproject kramberry "0.1.0"
-  :description ""
-  :url ""
+(defproject kramberry "0.0.1"
+  :description "Parse Kramdown syntax in Clojure"
+  :url "https://github.com/plexus/kramberry"
   :license {:name "Mozilla Public License 2.0"
             :url "https://www.mozilla.org/en-US/MPL/2.0/"}
+
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.7.228"]
-                 [org.clojure/core.async "0.2.374"]]
+                 [hiccup "1.0.5"]
+                 [hiccups "0.3.0"]
+                 [org.clojure/core.async "0.2.374"]
+                 [instaparse "1.4.1"]
+                 [hickory "0.6.0"]
+                 [pjstadig/humane-test-output "0.7.1"]]
 
   :plugins [[lein-cljsbuild "1.1.1"]
             [lein-doo "0.1.6"]]

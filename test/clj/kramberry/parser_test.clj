@@ -8,13 +8,13 @@
 
 (humane-output/activate!)
 
-(def testcases ["block/03_paragraph/one_para"
+(def testcases ["block/01_blank_line/spaces"
+                "block/01_blank_line/tabs"
+                "block/03_paragraph/one_para"
                 "block/03_paragraph/indented"
                 "block/03_paragraph/no_newline_at_end"
-                "block/03_paragraph/two_para"])
-
-
-
+                "block/03_paragraph/two_para"
+                "block/04_header/basic"])
 
 (defn html->hiccup [h]
   (map hickory/as-hiccup (hickory/parse-fragment h)))
@@ -38,4 +38,12 @@
       (let [m (load-md c)
             h (load-html c)]
         (is (= (md->hiccup m) (html->hiccup h)))))))
+
+
+(comment
+  (run-kramdown-tests)
+  (parse (load-md (second testcases)))
+
+  (count testcases)
+  )
 

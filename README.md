@@ -2,13 +2,14 @@
 
 An attempt to port the Kramdown syntax to Clojure and Clojurescript, based on the Kramdown test suite.
 
-So far it passes 10 out of 187 tests.
+So far it passes 20 out of 187 tests.
 
 At least partially supported so far
 
 * paragraphs
 * headers
 * indented code blocks
+* fenced code blocks with tildes or backticks
 * blockquotes
 
 ## License
